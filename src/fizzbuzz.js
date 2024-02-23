@@ -1,11 +1,12 @@
 
-function generarFizzbuzz(n){
-    if(n % 3 === 0){
-        return "Fizz"
+function generarFizzbuzz(n) {
+    if (n % 3 === 0) {
+        return "Fizz";
+    } else if (n % 5 === 0) {
+        return "Buzz";
+    } else {
+        return n.toString(); // Convierte el número a cadena para que pueda imprimirse directamente
     }
-    return n.toString();
-    
-   
 }
 
 export default generarFizzbuzz; 
