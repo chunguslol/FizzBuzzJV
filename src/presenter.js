@@ -1,15 +1,25 @@
-import sumar from "./sumador";
+// presenter.js
+import generarFizzBuzz from "./fizzbuzz";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#fizzbuzz-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+    div.innerHTML = "";
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+    
+    const numeroIngresado = document.querySelector("#numero").value;
+    
+   
+    if (!isNaN(numeroIngresado) && numeroIngresado > 0) {
+        
+        for (let i = 1; i <= numeroIngresado; i++) {
+            let resultado = generarFizzBuzz(i);  
+            div.innerHTML += "<p>" + resultado + "</p>";
+        }
+    } else {
+        console.log("Por favor, ingrese un número válido y mayor que cero.");
+    }
 });
