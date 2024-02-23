@@ -1,6 +1,6 @@
 
 function generarFizzbuzz(n){
-    return 1;
+    return n.toString();
 }
 
-export default generarFizzbuzz;
+export default generarFizzbuzz; 

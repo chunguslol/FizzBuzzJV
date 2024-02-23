@@ -7,4 +7,7 @@ describe("FizzBuzz", () => {
 
     });
     
+    it("Deberia generar el mismo numero para uno que no tiene regla para el 2", () => {
+        expect(generarFizzbuzz(2)).toEqual("2");
+      });
 });
