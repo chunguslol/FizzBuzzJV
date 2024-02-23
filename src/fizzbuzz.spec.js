@@ -6,8 +6,12 @@ describe("FizzBuzz", () => {
       expect(generarFizzbuzz(1)).toEqual("1");
 
     });
-    
+
     it("Deberia generar el mismo numero para uno que no tiene regla para el 2", () => {
         expect(generarFizzbuzz(2)).toEqual("2");
+    });
+
+    it("Deberia generar en vez del numero Fizz ", () => {
+        expect(generarFizzbuzz(3)).toEqual("Fizz");
       });
 });
